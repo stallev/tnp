@@ -1,8 +1,21 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import { useEffect } from 'react';
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
+  // if (typeof window !== 'undefined') {
+  //   // Здесь вы можете использовать объект window
+  //   console.log(window.dataLayer);
+  // }
+  useEffect(() => {
+    // Добавление кастомного события
+    console.log(window.dataLayer);
+    window.dataLayer.push({
+      event: 'my_custom_event',
+      myCustomData: 'This is my custom data',
+    });
+  }, []);
   return (
     <div className={styles.container}>
       <Head>
