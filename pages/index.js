@@ -15,6 +15,7 @@ export default function Home() {
       event: 'my_custom_event',
       myCustomData: 'This is my custom data',
     });
+    console.log('after sending the event...')
   }, []);
   return (
     <div className={styles.container}>
