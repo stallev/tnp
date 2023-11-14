@@ -1,14 +1,19 @@
-import { useEffect } from 'react'
-import { useAnalyticsEventTracker, AnalyticEventParameters, AuthTypes } from '../events/useAnalyticsEventTracker'
+import { useAnalyticsEventTracker } from '../events/useAnalyticsEventTracker'
+import { AuthTypes, AnalyticsEvents, AnalyticEventParameters } from '../events/AnalyticsEvents'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import { useEffect } from 'react'
 
 export default function Home() {
   useAnalyticsEventTracker({
     ...AnalyticsEvents.UserRegistration,
     [AnalyticEventParameters.label]: AuthTypes.facebook,
   });
+  // console.log(AuthTypes)
+  // useEffect(() => {
+  //   console.log(AnalyticsEvents)
+  // }, [])
   return (
     <div className={styles.container}>
       <Head>
