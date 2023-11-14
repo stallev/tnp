@@ -11,8 +11,10 @@ export default function Home() {
   useEffect(() => {
     // Добавление кастомного события
     window.dataLayer.push({
-      event: 'my_custom_event',
-      myCustomData: 'This is my custom data',
+      event: 'myCustomEvent',
+      eventCategory: 'Category',
+      eventAction: 'Action',
+      eventLabel: 'Label',
     });
     console.log(window.dataLayer);
     console.log('after sending the event...')
