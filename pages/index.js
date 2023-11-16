@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { useEffect } from 'react';
 import { event } from "nextjs-google-analytics";
+import { gaMeasurementId } from '../analytics/constants';
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -20,7 +21,7 @@ export default function Home() {
     event('nextjs_google_analytics_event', {
       category: 'Contact',
       label: 'Some name',
-    });
+    }, gaMeasurementId);
     console.log(window.dataLayer);
     console.log('after sending the event...')
   }, []);
