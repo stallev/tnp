@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import { useReportWebVitals } from 'next/web-vitals'
 import { useEffect } from 'react';
 import { event } from "nextjs-google-analytics";
 import { gaMeasurementId } from '../analytics/constants';
@@ -10,6 +11,9 @@ export default function Home() {
   //   // Здесь вы можете использовать объект window
   //   console.log(window.dataLayer);
   // }
+  useReportWebVitals((metric) => {
+    console.log(metric)
+  })
   useEffect(() => {
     // Добавление кастомного события
     window.dataLayer.push({
