@@ -12,6 +12,7 @@ const CustomImage = ({
   alt, 
   ariaLabel = '',
   priority,
+  sizes='680px'
 }) => {
   return (
     <div
@@ -26,6 +27,7 @@ const CustomImage = ({
         fill
         alt={alt}
         priority={priority}
+        sizes={sizes}
       />
     </div>
   );

@@ -31,11 +31,11 @@ export default function Home() {
 
       <main className={styles.main}>
         <div className={styles.grid}>
-          <CustomImage imageName="image1" sizes='100vw'/>
-          <CustomImage imageName="image2" sizes='100vw'/>
-          <CustomImage imageName="image3" sizes='100vw'/>
-          <CustomImage imageName="image4" sizes='100vw'/>
-          <CustomImage imageName="image5" sizes='100vw'/>
+          <CustomImage imageName="image1"/>
+          <CustomImage imageName="image2"/>
+          <CustomImage imageName="image3"/>
+          <CustomImage imageName="image4"/>
+          <CustomImage imageName="image5"/>
         </div>
       </main>
 
