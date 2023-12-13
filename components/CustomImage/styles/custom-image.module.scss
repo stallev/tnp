@@ -1,0 +1,10 @@
+.custom-image {
+  position: relative;
+  display: block;
+  width: 680px;
+  height: 500px;
+
+  img {
+    object-fit: cover;
+  }
+}
