@@ -36,6 +36,7 @@ export default function Home() {
           <CustomImage imageName="image3"/>
           <CustomImage imageName="image4"/>
           <CustomImage imageName="image5"/>
+          <CustomImage imageName="image6"/>
         </div>
       </main>
 
